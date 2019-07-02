@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    {% load static %}
+    <script src="{%static 'scripts/my.js' %}"></script>
+    
+</head>
+<body>
+    <link rel="stylesheet"href="{%static 'css/register.css'%}"/>
+    <h1>Register</h1>
+    <form action="" method="post" name="form1">
+        User: <input type="text" name="user"required="required"placeholder="请输入邮箱/电话"><br>
+        Password: <input type="password" name="pwd"required="required"placeholder="请输入不少于6位的字符"><br>
+        Correct Password:<input type="password" name="pwd2"required="required"placeholder="两次密码一致"><br>
+        username:<input type="text" name="username"required="required"placeholder="请输入不少于6位的字符">
+        <a href="">唯一验证</a><br>
+        h_pic:<br>
+        <img src="{% static 'image/2.jpg' %}"/>
+        <a href="">请选择</a><br>
+        sex:<input type="radio" name="sex"value="男">男
+        <input type="radio" name="sex"value="女">女<br><br>
+        city:<select>
+                <option value ="c1">c1</option>
+                <option value ="c2">c2</option>
+            </select><br><br>
+        char_word:<input type="text" name="character_word"placeholder="请输入不多于30字"><br>
+            <button type="submit"onclick="checkpwd()";>立刻注册</button>
+            <a href=".">返回登陆</a>
+    </form> 
+</body>
+</html>

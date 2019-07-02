@@ -1,0 +1,35 @@
+h1{
+    margin-left:45%;
+}
+image{
+    margin-left:10%;
+    width: 100px;
+    height: 100px;
+}
+form { 
+    margin-left:40%;
+    color:#555555; 
+    text-shadow: 0px 10px 8px 
+    #CDC673; 
+    letter-spacing:2px;
+    margin-bottom:20px; 
+}
+/* 两个输入框的css */
+input{
+    margin:auto;
+    padding:10px;
+    margin-bottom:10px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+/* 登录按钮的css，cursor:pointer当鼠标移到按钮上面时变成小手形状 */
+form button{
+
+    background-color:#CDC673;
+    width:120px;
+    height:30px;
+    border:1px solid black;
+    border-radius:4px;
+    cursor:pointer; 
+}                                                                                                                                                  

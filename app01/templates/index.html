@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    {% load static %}
+    <script src="{%static 'scripts/my.js'%}"></script>
+</head> 
+<body>
+    <link rel="stylesheet"href="{%static 'css/global.css'%}"/>
+    <h1>{{welcome}}</h1>
+    <form action="" method="post">
+        <input type="text" name="user" placeholder="用户名" required="required"><br>
+        <input type="password" name="password" placeholder="密  码" required="required"><br><br>
+        <button type="submit"onclick="load_successful()";>登录</button>
+        <a href="register.html">注册</a>
+    </form> 
+</body>
+</html>
