@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆界面</title>
+    {% load static %}
+    <script src="{%static 'scripts/my.js'%}"></script>
+</head> 
+<body>
+    <link rel="stylesheet"href="{%static 'css/global.css'%}"/>
+    <h1>Blog在线登陆</h1>
+    <form action="/app01/login/" method="POST">
+        {%csrf_token%}
+        <input type="text" name="username" placeholder="用户名" required="required" value={{account}}><br>
+        <input type="password" name="pwd" placeholder="密  码" required="required" value={{password}}><br>
+        <input type="checkbox"name=rem>记住我<br><br>
+        <button type="submit" >登录</button>
+        <a href="/app01/register">注册</a><br>
+       
+    </form> 
+    {%if msg%}
+   <center> {{msg}}  </center>
+    {%endif%}
+</body>
+</html>

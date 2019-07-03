@@ -16,3 +16,7 @@ function checkpwd(){
         alert("两次输入密码不一致，请重新输入");
         }
 }
+
+function checkonly(){
+    
+}
