@@ -21,7 +21,7 @@ def login(request):
         num=val.index(name)
         if name ==Username[num] and pwd== Userpwd[num] :
         #if request.session[name]== pwd:
-            #将账号密码加密存入coolie
+            #将账号密码加密存入cookie
             response = redirect('/app01/home')
             if remember:
                 response.set_signed_cookie('account',name,salt='aaa')
@@ -45,11 +45,14 @@ def home(request):
     if request.POST :
         user = request.POST.get('user',None)
         pwd = request.POST.get("pwd",None)
-        Username.append(user)
-        Userpwd.append(pwd)
-        request.session['user'] = Username
-        request.session['pwd'] = Userpwd
-        return render(request,'login.html',{'msg':"注册成功！"})
+        if user in Username:
+            return render(request,'register.html',{'msg':"昵称已占用，请换一个！"})
+        else:
+            Username.append(user)
+            Userpwd.append(pwd)
+            request.session['user'] = Username
+            request.session['pwd'] = Userpwd
+            return render(request,'login.html',{'msg':"注册成功！"})
     else:
         #从session中获得账号，如果能获取则跳转到home页面，否则转会登陆页面
         account = request.session.get('account',None)

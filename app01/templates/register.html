@@ -18,7 +18,7 @@
         密码: <input type="password" name="pwd"required="required"placeholder="请输入不少于6位的字符"><br>
         确认密码:<input type="password" name="pwd2"required="required"placeholder="两次密码一致"><br>
         昵称:<input type="text" name="username"required="required"placeholder="请输入不少于6位的字符">
-        <a href="" onclick="checkonly()">唯一验证</a><br>
+        <button type="submit">唯一验证</button>{% if msg %} {{msg}} {% endif %}<br>
         头像:<br>
         <img src="{% static 'image/2.jpg' %}"/>
         <a href="">请选择</a><br>
