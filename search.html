@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>search</h1>
+    <form action="/app02/search/" method="POST">
+        {% csrf_token%}
+        <input type="text" placeholder="please enter" name="keyword">
+        <input type="submit" placeholder="submit">
+    </form>
+    {%if keyword%}
+    搜索的内容：{{keyword}}
+    {%endif%}
+</body>
+</html>

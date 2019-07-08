@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    <h1>上传头像</h1>
+    <form action="/app02/pictureload/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        选择上传的头像图片：
+        <input type="file" name="upfile" required><br>
+        <button type="submit">上传</button>
+    </form>
+    {% if url %}
+    <img src="{% static url %}" alt="" width="300">
+    {% endif %}
+</body>
+</html>
